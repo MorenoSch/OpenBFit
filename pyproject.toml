@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Core project metadata
+name = "OpenBFit"
+version = "0.1.0"
+description = "A bike fitting app using computer vision"
+readme = "README.md"  # Points to your README file
+authors = []
+dependencies = []
+python = ">=3.10"
