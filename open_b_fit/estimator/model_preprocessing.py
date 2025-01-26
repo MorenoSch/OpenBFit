@@ -1,3 +1,6 @@
+import cv2
+
+
 class BaseDataPreprocessor:
     def __init__(self):
         pass
@@ -6,7 +9,8 @@ class BaseDataPreprocessor:
 class PreprocessPredictData(BaseDataPreprocessor):
     def __init__(self):
         super().__init__()
-        raise NotImplementedError
 
-    def pre_process(self):
-        raise NotImplementedError
+    def pre_process(self, image_path):
+        image = cv2.imread(image_path)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        return image
